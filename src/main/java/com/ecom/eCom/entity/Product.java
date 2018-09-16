@@ -1,9 +1,13 @@
 package com.ecom.eCom.entity;
 
+import static org.mockito.Mockito.CALLS_REAL_METHODS;
+
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.util.Arrays;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -38,7 +42,7 @@ public class Product {
 	private String productLocation;
 	@OneToMany(mappedBy = "product")
 	private List<ProductDetail> productDetail;
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name = "productcategory_id")
 	private Productcategory productcategory;
 
@@ -177,5 +181,17 @@ public class Product {
 	public void setProductDetail(List<ProductDetail> productDetail) {
 		this.productDetail = productDetail;
 	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", productSKU=" + productSKU + ", productName=" + productName + ", productPrice="
+				+ productPrice + ", productWeight=" + productWeight + ", productCartDesc=" + productCartDesc
+				+ ", productShortDesc=" + productShortDesc + ", productLongDesc=" + productLongDesc + ", ProductThumb="
+				+ ProductThumb + ", image=" + Arrays.toString(image) + ", ProductUpdateDate=" + ProductUpdateDate
+				+ ", ProductStock=" + ProductStock + ", productLive=" + productLive + ", productUnlimited="
+				+ productUnlimited + ", productLocation=" + productLocation + ", productDetail=" + productDetail
+				+ ", productcategory=" + productcategory + "]";
+	}
+	
 
 }
