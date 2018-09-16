@@ -8,14 +8,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Products")
-public class Products {
+@Table(name = "product")
+public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,10 +36,11 @@ public class Products {
 	private Integer productLive;
 	private Integer productUnlimited;
 	private String productLocation;
-	@OneToMany
-	private List<Productoptions> productoptions;
+	@OneToMany(mappedBy = "product")
+	private List<ProductDetail> productDetail;
 	@OneToOne
-	private Productcategories productcategories;
+	@JoinColumn(name = "productcategory_id")
+	private Productcategory productcategory;
 
 	public Long getId() {
 		return id;
@@ -160,20 +162,20 @@ public class Products {
 		this.productLocation = productLocation;
 	}
 
-	public List<Productoptions> getProductoptions() {
-		return productoptions;
+	public Productcategory getProductcategory() {
+		return productcategory;
 	}
 
-	public void setProductoptions(List<Productoptions> productoptions) {
-		this.productoptions = productoptions;
+	public void setProductcategory(Productcategory productcategory) {
+		this.productcategory = productcategory;
 	}
 
-	public Productcategories getProductcategories() {
-		return productcategories;
+	public List<ProductDetail> getProductDetail() {
+		return productDetail;
 	}
 
-	public void setProductcategories(Productcategories productcategories) {
-		this.productcategories = productcategories;
+	public void setProductDetail(List<ProductDetail> productDetail) {
+		this.productDetail = productDetail;
 	}
 
 }

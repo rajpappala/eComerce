@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Productcategories")
-public class Productcategories {
+@Table(name = "productcategory")
+public class Productcategory {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
