@@ -1,7 +1,5 @@
 package com.ecom.eCom.entity;
 
-import java.math.BigDecimal;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -54,4 +52,11 @@ public class ProductDetail {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
+
+	@Override
+	public String toString() {
+		return "ProductDetail [id=" + id + ", detailName=" + detailName + ", detailValue=" + detailValue + ", product="
+				+ product + "]";
+	}
+	
 }
