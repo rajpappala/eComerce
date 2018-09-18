@@ -123,15 +123,15 @@ public class ProductTest {
 		product.setProductLocation("ID_232323_2");
 		assertEquals(test_val, product.getProductLocation());
 	}
-
-	@Test
-	public void testGetProductcategory() {
-		fail("");
-	}
-
-	@Test
-	public void testGetProductDetail() {
-		fail("");
-	}
+//
+//	@Test
+//	public void testGetProductcategory() {
+//		fail("");
+//	}
+//
+//	@Test
+//	public void testGetProductDetail() {
+//		fail("");
+//	}
 
 }

@@ -2,18 +2,23 @@ package com.ecom.eCom.model;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class ProductcategoryDTOTest {
 
-	@Test
-	public void testSetId() {
-		fail("Not yet implemented");
+	ProductcategoryDTO productcategoryDTO;
+	@Before
+	public void iniTest() {
+		productcategoryDTO=new ProductcategoryDTO();
 	}
+ 
 
 	@Test
-	public void testSetCategoryName() {
-		fail("Not yet implemented");
+	public void testGetCategoryName() {
+		String test_val = "ID_232323_2";
+		productcategoryDTO.setCategoryName("ID_232323_2");
+		assertEquals(test_val, productcategoryDTO.getCategoryName());
 	}
 
 }
