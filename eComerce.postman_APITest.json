@@ -1,0 +1,98 @@
+{
+	"id": "f6dabd1f-18ee-4050-b352-1266164c3267",
+	"name": "eComerce",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": null,
+	"order": [
+		"a978e330-8a8b-475a-87d2-62d5152c040a",
+		"08fb1be6-eeee-4c68-9d5d-615988379024"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "08fb1be6-eeee-4c68-9d5d-615988379024",
+			"name": "http://localhost:8080/product/get?id=1",
+			"url": "http://localhost:8080/product/show?id=1",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Language",
+					"value": "en_gb",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept-Language",
+					"value": "en_gb",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\"productSKU\":\"IB_000123_F\",\n\"productName\":\"The Alchemist\",\n\"productCartDesc\":\"The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese\",\n\"productShortDesc\":\"The Alchemist\",\n\"productLongDesc\":\"The Alchemist\",\n\"ProductThumb\":\"The Alchemist\",\n\"ProductUpdateDate\":\"\",\n\"ProductStock\":22,\n\"productLive\":22,\n\"productUnlimited\":\"22\",\n\"productLocation\":\"Hyd\",\n\"productDetail\":[{\n\t\"detailName\":\"Publisher\",\n\t\"detailValue\":\"SSDSS\"\n},{\n\t\"detailName\":\"Publisher\",\n\t\"detailValue\":\"SSDSS\"\n},{\n\t\"detailName\":\"Publisher\",\n\t\"detailValue\":\"SSDSS\"\n}]\n}",
+			"headers": "Content-Language: en_gb\nAccept-Language: en_gb\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a978e330-8a8b-475a-87d2-62d5152c040a",
+			"name": "http://localhost:8080/product/save",
+			"url": "http://localhost:8080/product/save",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Language",
+					"value": "en_gb",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept-Language",
+					"value": "en_gb",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\"productSKU\":\"IB_000123_F\",\n\"productName\":\"The Alchemist\",\n\"productCartDesc\":\"The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese\",\n\"productShortDesc\":\"The Alchemist\",\n\"productLongDesc\":\"The Alchemist\",\n\"ProductThumb\":\"The Alchemist\",\n\"ProductUpdateDate\":\"\",\n\"ProductStock\":22,\n\"productLive\":22,\n\"productUnlimited\":\"22\",\n\"productLocation\":\"Hyd\",\n\"productDetail\":[{\n\t\"detailName\":\"Publisher\",\n\t\"detailValue\":\"SSDSS\"\n},{\n\t\"detailName\":\"Publisher\",\n\t\"detailValue\":\"SSDSS\"\n},{\n\t\"detailName\":\"Publisher\",\n\t\"detailValue\":\"SSDSS\"\n}]\n}",
+			"headers": "Content-Language: en_gb\nAccept-Language: en_gb\nContent-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}
